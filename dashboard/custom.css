@@ -1,0 +1,1912 @@
+/* ========== DASHBOARD SPECIFIC STYLES ========== */
+
+/* Dashboard main container with gradient background */
+.dashboard-main {
+    background-image: linear-gradient(to right, #243949 0%, #517fa4 100%) !important;
+    min-height: 100vh;
+    font-family: 'Inter', sans-serif;
+}
+
+.dashboard-container {
+    min-height: 100vh;
+}
+
+/* Main background gradient - Updated to match poster color */
+body, .dash-container {
+    background-image: linear-gradient(to right, #243949 0%, #517fa4 100%) !important;
+    min-height: 100vh;
+}
+
+/* ========== SIDEBAR TAB STYLES ========== */
+
+/* Navigation link styles with modern glass effect */
+.nav-link, .sidebar-tab {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    background: rgba(255, 255, 255, 0.08) !important;
+    color: white !important;
+    backdrop-filter: blur(15px);
+    border: none !important;
+    padding: 12px 20px !important;
+    margin: 0 10px !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-link::before, .sidebar-tab::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transition: left 0.5s;
+}
+
+.nav-link:hover::before, .sidebar-tab:hover::before {
+    left: 100%;
+}
+
+.nav-link:hover, .sidebar-tab:hover {
+    background: rgba(255, 255, 255, 0.15) !important;
+    color: white !important;
+    transform: translateX(8px) scale(1.02);
+    box-shadow: 0 8px 32px rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.25) !important;
+}
+
+.nav-link.active, .sidebar-tab.active {
+    background: rgba(255, 255, 255, 0.2) !important;
+    color: white !important;
+    box-shadow: 0 8px 32px rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    transform: translateX(4px);
+}
+
+/* Individual tab styling with enhanced effects */
+#tab-1-link.active,
+#tab-2-link.active, 
+#tab-3-link.active,
+#tab-4-link.active {
+    background: rgba(255, 255, 255, 0.2) !important;
+    color: white !important;
+    box-shadow: 0 8px 32px rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    transform: translateX(4px);
+}
+
+#tab-1-link:hover,
+#tab-2-link:hover,
+#tab-3-link:hover, 
+#tab-4-link:hover {
+    background: rgba(255, 255, 255, 0.15) !important;
+    color: white !important;
+    transform: translateX(8px) scale(1.02);
+    box-shadow: 0 8px 32px rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.25) !important;
+}
+
+/* Reset inactive tabs - no borders, clean look */
+#tab-1-link:not(.active):not(:hover),
+#tab-2-link:not(.active):not(:hover),
+#tab-3-link:not(.active):not(:hover),
+#tab-4-link:not(.active):not(:hover) {
+    background: rgba(255, 255, 255, 0.08) !important;
+    box-shadow: none;
+    transform: none;
+    border: none !important;
+}
+
+/* Remove default Bootstrap column borders and padding */
+.col-2 {
+    border-right: none !important;
+}
+
+/* Smooth focus states */
+.nav-link:focus, .sidebar-tab:focus {
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.1) !important;
+    outline: none !important;
+}
+
+/* ========== DASHBOARD TYPOGRAPHY STYLES ========== */
+
+/* Typography styles with Inter font family */
+.dashboard-title {
+    color: white !important;
+    font-family: 'Inter', sans-serif !important;
+    font-weight: bold !important;
+}
+
+.dashboard-subtitle {
+    color: rgba(255,255,255,0.8) !important;
+    font-family: 'Inter', sans-serif !important;
+    font-weight: 300 !important;
+}
+
+.quick-guide-title {
+    color: white !important;
+    font-family: 'Inter', sans-serif !important;
+    font-weight: normal !important;
+}
+
+.quick-guide-text {
+    color: rgba(255,255,255,0.9) !important;
+    font-family: 'Inter', sans-serif !important;
+    font-weight: 300 !important;
+}
+
+.filters-title {
+    color: white !important;
+    font-family: 'Inter', sans-serif !important;
+    font-weight: normal !important;
+}
+
+.card-title-header {
+    color: white !important;
+    font-family: 'Inter', sans-serif !important;
+    font-weight: normal !important;
+}
+
+/* ========== CARD STYLING ========== */
+
+/* Card styling */
+.quick-guide-card {
+    background-color: rgba(61, 94, 110, 0.3) !important;
+    border: 1px solid rgba(255,255,255,0.2) !important;
+}
+
+.filters-card {
+    background-color: transparent !important;
+    border: 1px solid rgba(255,255,255,0.2) !important;
+}
+
+.filters-header {
+    background-color: rgba(61, 94, 110, 0.4) !important;
+    border: none !important;
+}
+
+.filters-body {
+    background-color: rgba(61, 94, 110, 0.2) !important;
+    border: none !important;
+}
+
+.chart-card {
+    background-color: transparent !important;
+    border: 1px solid rgba(255,255,255,0.2) !important;
+}
+
+.chart-card-header {
+    background-color: rgba(61, 94, 110, 0.4) !important;
+    border: none !important;
+}
+
+.chart-card-body {
+    background-color: rgba(61, 94, 110, 0.2) !important;
+}
+
+/* Additional styling for cards and content areas to complement the gradient */
+.card {
+    background: rgba(255, 255, 255, 0.05) !important;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+/* ========== CUSTOM FORM CONTROLS ========== */
+
+/* Custom dropdown styling - Enhanced for text color */
+.custom-dropdown .Select-control {
+    background-color: #3d5e6e !important;
+    border: 1px solid rgba(255,255,255,0.3) !important;
+    border-radius: 6px !important;
+    color: white !important;
+    font-size: 12px !important;
+    font-family: 'Inter', sans-serif !important;
+}
+
+.custom-dropdown .Select-placeholder {
+    color: rgba(255,255,255,0.7) !important;
+    font-family: 'Inter', sans-serif !important;
+}
+
+.custom-dropdown .Select-input > input {
+    color: white !important;
+    font-family: 'Inter', sans-serif !important;
+}
+
+.custom-dropdown .Select-menu-outer {
+    background-color: #3d5e6e !important;
+    border: 1px solid rgba(255,255,255,0.3) !important;
+    z-index: 9999 !important;
+    position: relative !important;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3) !important;
+}
+
+.custom-dropdown .Select-menu {
+    background-color: #3d5e6e !important;
+    border: 1px solid rgba(255,255,255,0.3) !important;
+    z-index: 9999 !important;
+}
+
+.custom-dropdown .Select-option {
+    background-color: #3d5e6e !important;
+    color: white !important;
+    font-family: 'Inter', sans-serif !important;
+    font-size: 12px !important;
+    padding: 8px 12px !important;
+}
+
+.custom-dropdown .Select-option:hover {
+    background-color: rgba(255,255,255,0.15) !important;
+    color: white !important;
+}
+
+.custom-dropdown .Select-option.is-focused {
+    background-color: rgba(255,255,255,0.15) !important;
+    color: white !important;
+}
+
+.custom-dropdown .Select-option.is-selected {
+    background-color: rgba(255,255,255,0.25) !important;
+    color: white !important;
+    font-weight: 500 !important;
+}
+
+.custom-dropdown .Select-multi-value-wrapper {
+    background-color: #3d5e6e !important;
+}
+
+.custom-dropdown .Select-value {
+    background-color: rgba(255,255,255,0.2) !important;
+    border: 1px solid rgba(255,255,255,0.3) !important;
+    color: white !important;
+    font-family: 'Inter', sans-serif !important;
+}
+
+.custom-dropdown .Select-value-label {
+    color: white !important;
+    font-family: 'Inter', sans-serif !important;
+}
+
+.custom-dropdown .Select-arrow-zone {
+    color: white !important;
+}
+
+.custom-dropdown .Select-clear-zone {
+    color: white !important;
+}
+
+/* Force white text on all dropdown elements */
+.custom-dropdown * {
+    color: white !important;
+    font-family: 'Inter', sans-serif !important;
+}
+
+/* Modern Dash dropdown styling (for newer versions) */
+.custom-dropdown .dash-dropdown .Select--single .Select-control {
+    background-color: #3d5e6e !important;
+    border: 1px solid rgba(255,255,255,0.3) !important;
+    color: white !important;
+}
+
+.custom-dropdown .dash-dropdown .Select-menu-outer {
+    z-index: 9999 !important;
+    background-color: #3d5e6e !important;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3) !important;
+}
+
+.custom-dropdown .dash-dropdown .Select-option {
+    background-color: #3d5e6e !important;
+    color: white !important;
+}
+
+.custom-dropdown .dash-dropdown .Select-option:hover {
+    background-color: rgba(255,255,255,0.15) !important;
+    color: white !important;
+}
+
+/* Alternative selector patterns for different Dash versions */
+.custom-dropdown div[role="option"] {
+    background-color: #3d5e6e !important;
+    color: white !important;
+    font-family: 'Inter', sans-serif !important;
+}
+
+.custom-dropdown div[role="option"]:hover {
+    background-color: rgba(255,255,255,0.15) !important;
+    color: white !important;
+}
+
+/* Custom date picker styling */
+.custom-date-picker .DateInput {
+    background-color: #3d5e6e !important;
+    border: 1px solid rgba(255,255,255,0.3) !important;
+    border-radius: 6px !important;
+}
+
+.custom-date-picker .DateInput_input {
+    background-color: #3d5e6e !important;
+    color: white !important;
+    font-size: 12px !important;
+    font-family: 'Inter', sans-serif !important;
+}
+
+.custom-date-picker .DateInput_input::placeholder {
+    color: rgba(255,255,255,0.7) !important;
+    font-family: 'Inter', sans-serif !important;
+}
+
+.custom-date-picker .DateRangePickerInput {
+    background-color: #3d5e6e !important;
+    border: 1px solid rgba(255,255,255,0.3) !important;
+    border-radius: 6px !important;
+}
+
+/* Date picker dropdown calendar styling */
+.SingleDatePickerInput__display-text {
+    background-color: #3d5e6e !important;
+    color: white !important;
+    font-family: 'Inter', sans-serif !important;
+}
+
+.DateRangePickerInput__display-text {
+    background-color: #3d5e6e !important;
+    color: white !important;
+    font-family: 'Inter', sans-serif !important;
+}
+
+/* Calendar popup styling */
+.DateRangePicker__picker,
+.SingleDatePicker__picker {
+    z-index: 9999 !important;
+    background-color: #2a4c5a !important;
+    border: 1px solid rgba(255,255,255,0.3) !important;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3) !important;
+}
+
+.DayPicker,
+.DayPicker__withBorder {
+    background-color: #2a4c5a !important;
+}
+
+.CalendarMonth,
+.CalendarMonth__table {
+    background-color: #2a4c5a !important;
+}
+
+.CalendarMonth_caption {
+    color: white !important;
+    font-family: 'Inter', sans-serif !important;
+    background-color: #2a4c5a !important;
+}
+
+.CalendarDay__default {
+    background-color: #3d5e6e !important;
+    color: white !important;
+    border: 1px solid rgba(255,255,255,0.1) !important;
+    font-family: 'Inter', sans-serif !important;
+}
+
+.CalendarDay__default:hover {
+    background-color: rgba(255,255,255,0.15) !important;
+    color: white !important;
+    border: 1px solid rgba(255,255,255,0.3) !important;
+}
+
+.CalendarDay__selected,
+.CalendarDay__selected:active,
+.CalendarDay__selected:hover {
+    background-color: rgba(255,255,255,0.25) !important;
+    color: white !important;
+    border: 1px solid rgba(255,255,255,0.4) !important;
+}
+
+.CalendarDay__hovered_start,
+.CalendarDay__hovered_end {
+    background-color: rgba(255,255,255,0.2) !important;
+    color: white !important;
+}
+
+.DayPickerNavigation_button {
+    background-color: #3d5e6e !important;
+    color: white !important;
+    border: 1px solid rgba(255,255,255,0.3) !important;
+}
+
+.DayPickerNavigation_button:hover {
+    background-color: rgba(255,255,255,0.15) !important;
+    color: white !important;
+}
+
+.DayPickerNavigation_svg__horizontal {
+    fill: white !important;
+}
+
+.DayPicker_weekHeader {
+    color: white !important;
+    background-color: #2a4c5a !important;
+}
+
+.DayPicker_weekHeader_ul {
+    background-color: #2a4c5a !important;
+}
+
+.DayPicker_weekHeader_li {
+    color: white !important;
+    font-family: 'Inter', sans-serif !important;
+}
+
+/* ========== BUTTONS AND INTERACTIVE ELEMENTS ========== */
+
+/* Add accent colors that work with your poster color */
+.accent-color {
+    color: #3d5e6e !important;
+}
+
+.accent-bg {
+    background-color: #3d5e6e !important;
+}
+
+/* Buttons and interactive elements */
+.btn-primary {
+    background-color: #3d5e6e !important;
+    border-color: #3d5e6e !important;
+}
+
+.btn-primary:hover {
+    background-color: #2a4c5a !important;
+    border-color: #2a4c5a !important;
+}
+
+/* ========== Z-INDEX AND LAYERING FIXES ========== */
+
+/* Ensure filter controls appear above charts */
+.filters-card {
+    position: relative !important;
+    z-index: 1000 !important;
+}
+
+.filters-body {
+    position: relative !important;
+    z-index: 1000 !important;
+}
+
+/* Chart containers should have lower z-index */
+.chart-card {
+    position: relative !important;
+    z-index: 1 !important;
+}
+
+/* Dropdown menus need highest z-index */
+.custom-dropdown {
+    position: relative !important;
+    z-index: 1001 !important;
+}
+
+/* Date picker needs high z-index */
+.custom-date-picker {
+    position: relative !important;
+    z-index: 1001 !important;
+}
+
+/* Global dropdown portal styling for React-Select */
+.Select-menu-outer {
+    z-index: 9999 !important;
+}
+
+/* Plotly chart containers */
+.js-plotly-plot {
+    z-index: 1 !important;
+}
+
+.plotly .modebar {
+    z-index: 2 !important;
+}
+
+/* ========== FONT FAMILY OVERRIDES ========== */
+
+/* Ensure all text in dashboard uses Inter font and appropriate weights */
+.dashboard-main * {
+    font-family: 'Inter', sans-serif !important;
+}
+
+.dashboard-main p, .dashboard-main span, .dashboard-main div:not(.card-title):not(.filters-title):not(.card-title-header) {
+    font-weight: 300 !important;
+}
+
+/* ========== PREDICTION TAB SPECIFIC STYLES ========== */
+
+/* Prediction tab main container */
+.prediction-tab-container {
+    background: transparent !important;
+    color: white !important;
+    font-family: 'Inter', sans-serif !important;
+}
+
+/* Prediction tab titles and headings */
+.prediction-tab-container h2,
+.prediction-tab-container h3,
+.prediction-tab-container h4,
+.prediction-tab-container h5,
+.prediction-tab-container h6 {
+    color: white !important;
+    font-family: 'Inter', sans-serif !important;
+    font-weight: bold !important;
+}
+
+/* Instructions card styling */
+.prediction-tab-container .card {
+    background: rgba(255, 255, 255, 0.08) !important;
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    border-radius: 8px !important;
+}
+
+.prediction-tab-container .card-body {
+    background: transparent !important;
+    color: white !important;
+}
+
+.prediction-tab-container .card-title {
+    color: white !important;
+    font-family: 'Inter', sans-serif !important;
+    font-weight: bold !important;
+}
+
+.prediction-tab-container .card-text {
+    color: rgba(255, 255, 255, 0.9) !important;
+    font-family: 'Inter', sans-serif !important;
+    font-weight: 300 !important;
+}
+
+/* Form labels styling */
+.prediction-tab-container .form-label,
+.prediction-tab-container label {
+    color: white !important;
+    font-family: 'Inter', sans-serif !important;
+    font-weight: 500 !important;
+    font-size: 0.9em !important;
+}
+
+/* Input fields styling */
+.prediction-tab-container .form-control,
+.prediction-tab-container input[type="number"] {
+    background-color: rgba(61, 94, 110, 0.6) !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    border-radius: 6px !important;
+    color: white !important;
+    font-family: 'Inter', sans-serif !important;
+    font-size: 0.9em !important;
+    padding: 8px 12px !important;
+    transition: all 0.3s ease !important;
+}
+
+.prediction-tab-container .form-control:focus,
+.prediction-tab-container input[type="number"]:focus {
+    background-color: rgba(61, 94, 110, 0.8) !important;
+    border: 1px solid rgba(255, 255, 255, 0.5) !important;
+    color: white !important;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.1) !important;
+}
+
+.prediction-tab-container .form-control::placeholder,
+.prediction-tab-container input[type="number"]::placeholder {
+    color: rgba(255, 255, 255, 0.6) !important;
+    font-family: 'Inter', sans-serif !important;
+}
+
+/* Dropdown styling for prediction tab */
+.prediction-tab-container .Select-control {
+    background-color: rgba(61, 94, 110, 0.6) !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    border-radius: 6px !important;
+    color: white !important;
+    font-size: 0.9em !important;
+    font-family: 'Inter', sans-serif !important;
+    min-height: 38px !important;
+}
+
+.prediction-tab-container .Select-placeholder {
+    color: rgba(255, 255, 255, 0.6) !important;
+    font-family: 'Inter', sans-serif !important;
+}
+
+.prediction-tab-container .Select-input > input {
+    color: white !important;
+    font-family: 'Inter', sans-serif !important;
+}
+
+.prediction-tab-container .Select-menu-outer {
+    background-color: rgba(61, 94, 110, 0.95) !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    z-index: 9999 !important;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3) !important;
+    border-radius: 6px !important;
+}
+
+.prediction-tab-container .Select-option {
+    background-color: transparent !important;
+    color: white !important;
+    font-family: 'Inter', sans-serif !important;
+    font-size: 0.9em !important;
+    padding: 8px 12px !important;
+}
+
+.prediction-tab-container .Select-option:hover {
+    background-color: rgba(255, 255, 255, 0.15) !important;
+    color: white !important;
+}
+
+.prediction-tab-container .Select-option.is-focused {
+    background-color: rgba(255, 255, 255, 0.15) !important;
+    color: white !important;
+}
+
+.prediction-tab-container .Select-option.is-selected {
+    background-color: rgba(255, 255, 255, 0.25) !important;
+    color: white !important;
+    font-weight: 500 !important;
+}
+
+.prediction-tab-container .Select-single-value {
+    color: white !important;
+    font-family: 'Inter', sans-serif !important;
+}
+
+/* Predict button styling */
+.prediction-tab-container .btn-primary {
+    background: linear-gradient(135deg, rgba(61, 94, 110, 0.8), rgba(36, 57, 73, 0.9)) !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    color: white !important;
+    font-family: 'Inter', sans-serif !important;
+    font-weight: bold !important;
+    border-radius: 8px !important;
+    padding: 12px 24px !important;
+    transition: all 0.3s ease !important;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2) !important;
+}
+
+.prediction-tab-container .btn-primary:hover {
+    background: linear-gradient(135deg, rgba(61, 94, 110, 1), rgba(36, 57, 73, 1)) !important;
+    border: 1px solid rgba(255, 255, 255, 0.5) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3) !important;
+}
+
+.prediction-tab-container .btn-primary:focus {
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.2) !important;
+}
+
+/* Results card styling */
+.prediction-tab-container .alert,
+.prediction-tab-container .card[style*="success"] {
+    background: rgba(40, 167, 69, 0.15) !important;
+    border: 1px solid rgba(40, 167, 69, 0.4) !important;
+    color: white !important;
+    backdrop-filter: blur(10px);
+}
+
+.prediction-tab-container .alert-warning {
+    background: rgba(255, 193, 7, 0.15) !important;
+    border: 1px solid rgba(255, 193, 7, 0.4) !important;
+    color: white !important;
+}
+
+.prediction-tab-container .alert-danger {
+    background: rgba(220, 53, 69, 0.15) !important;
+    border: 1px solid rgba(220, 53, 69, 0.4) !important;
+    color: white !important;
+}
+
+/* Context info cards */
+.prediction-tab-container .card[style*="warning"] {
+    background: rgba(255, 193, 7, 0.15) !important;
+    border: 1px solid rgba(255, 193, 7, 0.4) !important;
+    color: white !important;
+}
+
+.prediction-tab-container .card[style*="danger"] {
+    background: rgba(220, 53, 69, 0.15) !important;
+    border: 1px solid rgba(220, 53, 69, 0.4) !important;
+    color: white !important;
+}
+
+.prediction-tab-container .card[style*="secondary"] {
+    background: rgba(108, 117, 125, 0.15) !important;
+    border: 1px solid rgba(108, 117, 125, 0.4) !important;
+    color: white !important;
+}
+
+/* ========== STRATEGIC CHART AND MAP STYLING ========== */
+
+/* Chart card styling */
+.prediction-tab-container .chart-card {
+    background: rgba(61, 94, 110, 0.3) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+}
+
+.prediction-tab-container .chart-card-header {
+    background-color: rgba(61, 94, 110, 0.4) !important;
+    border: none !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+.prediction-tab-container .chart-card-body {
+    background-color: rgba(61, 94, 110, 0.2) !important;
+}
+
+/* Chart title styling */
+.prediction-tab-container .card-title-header {
+    color: white !important;
+    font-family: 'Inter', sans-serif !important;
+    font-weight: 500 !important;
+}
+
+/* Chart containers in prediction tab */
+.prediction-tab-container .js-plotly-plot {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border-radius: 8px !important;
+    backdrop-filter: blur(10px);
+}
+
+/* ========== STRATEGIC PLOTLY CHART TEXT STYLING ========== */
+/* Plotly chart text elements - make all text white */
+.prediction-tab-container .plotly text {
+    fill: white !important;
+    color: white !important;
+}
+
+/* Chart titles */
+.prediction-tab-container .plotly .gtitle,
+.prediction-tab-container .plotly .g-gtitle text {
+    fill: white !important;
+    color: white !important;
+    font-family: 'Inter', sans-serif !important;
+}
+
+/* Axis labels and tick labels */
+.prediction-tab-container .plotly .xtick text,
+.prediction-tab-container .plotly .ytick text,
+.prediction-tab-container .plotly .ztick text {
+    fill: white !important;
+    color: white !important;
+    font-family: 'Inter', sans-serif !important;
+}
+
+/* Axis titles */
+.prediction-tab-container .plotly .xtitle text,
+.prediction-tab-container .plotly .ytitle text,
+.prediction-tab-container .plotly .ztitle text {
+    fill: white !important;
+    color: white !important;
+    font-family: 'Inter', sans-serif !important;
+}
+
+/* Legend text */
+.prediction-tab-container .plotly .legend text,
+.prediction-tab-container .plotly .legendtext {
+    fill: white !important;
+    color: white !important;
+    font-family: 'Inter', sans-serif !important;
+}
+
+/* Annotation text */
+.prediction-tab-container .plotly .annotation text,
+.prediction-tab-container .plotly .annotationtext {
+    fill: white !important;
+    color: white !important;
+    font-family: 'Inter', sans-serif !important;
+}
+
+/* Colorbar labels */
+.prediction-tab-container .plotly .cbtick text,
+.prediction-tab-container .plotly .cbtitle text {
+    fill: white !important;
+    color: white !important;
+    font-family: 'Inter', sans-serif !important;
+}
+
+/* Hover text */
+.prediction-tab-container .plotly .hovertext {
+    color: white !important;
+    font-family: 'Inter', sans-serif !important;
+}
+
+/* Subplot titles */
+.prediction-tab-container .plotly .subplot .annotation-text {
+    fill: white !important;
+    color: white !important;
+    font-family: 'Inter', sans-serif !important;
+}
+
+/* Grid and axis lines */
+.prediction-tab-container .plotly .xgrid,
+.prediction-tab-container .plotly .ygrid,
+.prediction-tab-container .plotly .zgrid {
+    stroke: rgba(255, 255, 255, 0.3) !important;
+}
+
+.prediction-tab-container .plotly .xlines,
+.prediction-tab-container .plotly .ylines,
+.prediction-tab-container .plotly .zlines {
+    stroke: rgba(255, 255, 255, 0.5) !important;
+}
+
+/* Plotly chart background transparency */
+.prediction-tab-container .plotly .bg {
+    fill: transparent !important;
+}
+
+.prediction-tab-container .plotly .main-svg {
+    background: transparent !important;
+}
+
+/* Custom dropdown styling for charts/maps */
+.prediction-tab-container .custom-dropdown .Select-control {
+    background-color: #3d5e6e !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    border-radius: 6px !important;
+    color: white !important;
+    font-size: 12px !important;
+    font-family: 'Inter', sans-serif !important;
+}
+
+.prediction-tab-container .custom-dropdown .Select-placeholder {
+    color: rgba(255, 255, 255, 0.7) !important;
+    font-family: 'Inter', sans-serif !important;
+}
+
+.prediction-tab-container .custom-dropdown .Select-input > input {
+    color: white !important;
+    font-family: 'Inter', sans-serif !important;
+}
+
+.prediction-tab-container .custom-dropdown .Select-menu-outer {
+    background-color: #3d5e6e !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    z-index: 9999 !important;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3) !important;
+    border-radius: 6px !important;
+}
+
+.prediction-tab-container .custom-dropdown .Select-option {
+    background-color: #3d5e6e !important;
+    color: white !important;
+    font-family: 'Inter', sans-serif !important;
+}
+
+.prediction-tab-container .custom-dropdown .Select-option:hover {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.prediction-tab-container .custom-dropdown .Select-multi-value-wrapper {
+    background-color: #3d5e6e !important;
+}
+
+.prediction-tab-container .custom-dropdown .Select-value {
+    background-color: rgba(255, 255, 255, 0.2) !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    color: white !important;
+    font-family: 'Inter', sans-serif !important;
+}
+
+/* Custom date picker styling for charts/maps */
+.prediction-tab-container .custom-date-picker .DateInput {
+    background-color: #3d5e6e !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    border-radius: 6px !important;
+}
+
+.prediction-tab-container .custom-date-picker .DateInput_input {
+    background-color: #3d5e6e !important;
+    color: white !important;
+    font-size: 12px !important;
+    font-family: 'Inter', sans-serif !important;
+}
+
+.prediction-tab-container .custom-date-picker .DateInput_input::placeholder {
+    color: rgba(255, 255, 255, 0.7) !important;
+    font-family: 'Inter', sans-serif !important;
+}
+
+.prediction-tab-container .custom-date-picker .DateRangePickerInput {
+    background-color: #3d5e6e !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    border-radius: 6px !important;
+}
+
+/* Override default card styles for charts and maps in prediction tab */
+.prediction-tab-container .card {
+    background: rgba(255, 255, 255, 0.05) !important;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+/* Ensure all text is white in prediction tab */
+.prediction-tab-container p,
+.prediction-tab-container span,
+.prediction-tab-container div:not(.plotly):not(.js-plotly-plot) {
+    color: white !important;
+    font-family: 'Inter', sans-serif !important;
+}
+
+/* List styling in prediction tab */
+.prediction-tab-container ul,
+.prediction-tab-container li {
+    color: white !important;
+    font-family: 'Inter', sans-serif !important;
+}
+
+/* Strong/bold text styling */
+.prediction-tab-container strong,
+.prediction-tab-container b {
+    color: white !important;
+    font-family: 'Inter', sans-serif !important;
+    font-weight: bold !important;
+}
+
+/* Horizontal rule styling */
+.prediction-tab-container hr {
+    border-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+/* Row and column spacing adjustments */
+.prediction-tab-container .row {
+    margin: 0 !important;
+}
+
+.prediction-tab-container .col,
+.prediction-tab-container [class*="col-"] {
+    padding-left: 0.75rem !important;
+    padding-right: 0.75rem !important;
+}
+
+/* Ensure all text in prediction tab uses Inter font and appropriate weights */
+.prediction-tab-container * {
+    font-family: 'Inter', sans-serif !important;
+}
+
+.prediction-tab-container p, 
+.prediction-tab-container span, 
+.prediction-tab-container div:not(.card-title):not(.filters-title):not(.card-title-header) {
+    font-weight: 300 !important;
+}
+
+/* ========== RESPONSIVE ADJUSTMENTS ========== */
+@media (max-width: 768px) {
+    .prediction-tab-container .col-md-3,
+    .prediction-tab-container .col-md-6 {
+        margin-bottom: 15px;
+    }
+    
+    .prediction-tab-container .btn-lg {
+        font-size: 14px !important;
+        padding: 8px 16px !important;
+    }
+    
+    .prediction-tab-container .js-plotly-plot {
+        margin-bottom: 15px;
+    }
+}
+
+/* ========== FUTURE FORECAST TAB STYLING ========== */
+
+.future-tab-container {
+    background: transparent !important;
+    color: white !important;
+    font-family: 'Inter', sans-serif !important;
+}
+
+.future-tab-container h2,
+.future-tab-container h3,
+.future-tab-container h4,
+.future-tab-container h5,
+.future-tab-container h6 {
+    color: white !important;
+    font-family: 'Inter', sans-serif !important;
+    font-weight: bold !important;
+}
+
+.future-tab-container .card {
+    background: rgba(255, 255, 255, 0.08) !important;
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    border-radius: 8px !important;
+    color: white !important;
+}
+
+.future-tab-container .card-body {
+    background: transparent !important;
+    color: white !important;
+}
+
+.future-tab-container .card-title {
+    color: white !important;
+    font-weight: bold !important;
+    font-family: 'Inter', sans-serif !important;
+}
+
+.future-tab-container .card-text {
+    color: rgba(255, 255, 255, 0.9) !important;
+    font-weight: 300 !important;
+    font-family: 'Inter', sans-serif !important;
+}
+
+/* Form labels */
+.future-tab-container .form-label,
+.future-tab-container label {
+    color: white !important;
+    font-weight: 500 !important;
+    font-size: 0.9em !important;
+    font-family: 'Inter', sans-serif !important;
+}
+
+/* Input fields */
+.future-tab-container .form-control,
+.future-tab-container input[type="number"],
+.future-tab-container input[type="text"] {
+    background-color: rgba(61, 94, 110, 0.6) !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    border-radius: 6px !important;
+    color: white !important;
+    font-family: 'Inter', sans-serif !important;
+    font-size: 0.9em !important;
+    padding: 8px 12px !important;
+    transition: all 0.3s ease !important;
+}
+
+.future-tab-container .form-control:focus,
+.future-tab-container input[type="number"]:focus,
+.future-tab-container input[type="text"]:focus {
+    background-color: rgba(61, 94, 110, 0.8) !important;
+    border: 1px solid rgba(255, 255, 255, 0.5) !important;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.1) !important;
+    outline: none !important;
+}
+
+/* Input placeholders */
+.future-tab-container .form-control::placeholder,
+.future-tab-container input[type="number"]::placeholder,
+.future-tab-container input[type="text"]::placeholder {
+    color: rgba(255, 255, 255, 0.6) !important;
+    font-family: 'Inter', sans-serif !important;
+}
+
+/* Dropdown styling for Dash components */
+.future-tab-container .Select-control {
+    background-color: rgba(61, 94, 110, 0.6) !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    border-radius: 6px !important;
+    color: white !important;
+    font-size: 0.9em !important;
+    font-family: 'Inter', sans-serif !important;
+    min-height: 38px !important;
+}
+
+.future-tab-container .Select-placeholder {
+    color: rgba(255, 255, 255, 0.6) !important;
+}
+
+.future-tab-container .Select-input > input {
+    color: white !important;
+}
+
+.future-tab-container .Select-menu-outer {
+    background-color: rgba(61, 94, 110, 0.95) !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    border-radius: 6px !important;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3) !important;
+    z-index: 9999 !important;
+}
+
+.future-tab-container .Select-option {
+    background-color: transparent !important;
+    color: white !important;
+    font-family: 'Inter', sans-serif !important;
+    font-size: 0.9em !important;
+    padding: 8px 12px !important;
+}
+
+.future-tab-container .Select-option:hover,
+.future-tab-container .Select-option.is-focused {
+    background-color: rgba(255, 255, 255, 0.15) !important;
+    color: white !important;
+}
+
+.future-tab-container .Select-option.is-selected {
+    background-color: rgba(255, 255, 255, 0.25) !important;
+    color: white !important;
+    font-weight: 500 !important;
+}
+
+.future-tab-container .Select-single-value {
+    color: white !important;
+    font-family: 'Inter', sans-serif !important;
+}
+
+/* Date picker styling */
+.future-tab-container .DateInput {
+    background-color: rgba(61, 94, 110, 0.6) !important;
+}
+
+.future-tab-container .DateInput_input {
+    background-color: rgba(61, 94, 110, 0.6) !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    border-radius: 6px !important;
+    color: white !important;
+    font-family: 'Inter', sans-serif !important;
+    font-size: 0.9em !important;
+    padding: 8px 12px !important;
+}
+
+.future-tab-container .DateInput_input::placeholder {
+    color: rgba(255, 255, 255, 0.6) !important;
+}
+
+.future-tab-container .DateInput_input:focus {
+    background-color: rgba(61, 94, 110, 0.8) !important;
+    border: 1px solid rgba(255, 255, 255, 0.5) !important;
+    outline: none !important;
+}
+
+/* Date picker calendar popup */
+.future-tab-container .DateRangePickerInput,
+.future-tab-container .SingleDatePickerInput {
+    background-color: rgba(61, 94, 110, 0.6) !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    border-radius: 6px !important;
+}
+
+/* Calendar container */
+.DateRangePicker,
+.SingleDatePicker {
+    z-index: 10000 !important;
+}
+
+.DayPicker {
+    background-color: rgba(61, 94, 110, 0.95) !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    border-radius: 8px !important;
+    backdrop-filter: blur(15px) !important;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Calendar header */
+.DayPicker_weekHeader {
+    background-color: transparent !important;
+}
+
+.DayPicker_weekHeader_li {
+    color: white !important;
+    font-family: 'Inter', sans-serif !important;
+    font-weight: 500 !important;
+}
+
+/* Available dates (next 14 days) */
+.CalendarDay__default {
+    background-color: transparent !important;
+    color: white !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    font-family: 'Inter', sans-serif !important;
+}
+
+.CalendarDay__default:hover {
+    background-color: rgba(76, 175, 80, 0.3) !important;
+    border: 1px solid rgba(76, 175, 80, 0.6) !important;
+    color: white !important;
+}
+
+/* Selected date */
+.CalendarDay__selected,
+.CalendarDay__selected:active,
+.CalendarDay__selected:hover {
+    background-color: rgba(76, 175, 80, 0.8) !important;
+    border: 1px solid rgba(76, 175, 80, 1) !important;
+    color: white !important;
+}
+
+/* Blocked/disabled dates (past dates and beyond 14 days) */
+.CalendarDay__blocked_minimum_nights,
+.CalendarDay__blocked_calendar,
+.CalendarDay__blocked_out_of_range {
+    background-color: rgba(244, 67, 54, 0.2) !important;
+    border: 1px solid rgba(244, 67, 54, 0.4) !important;
+    color: rgba(244, 67, 54, 0.8) !important;
+    cursor: not-allowed !important;
+    position: relative !important;
+}
+
+.CalendarDay__blocked_minimum_nights:hover,
+.CalendarDay__blocked_calendar:hover,
+.CalendarDay__blocked_out_of_range:hover {
+    background-color: rgba(244, 67, 54, 0.3) !important;
+    border: 1px solid rgba(244, 67, 54, 0.6) !important;
+    color: rgba(244, 67, 54, 1) !important;
+}
+
+/* Add strikethrough effect for blocked dates */
+.CalendarDay__blocked_minimum_nights::after,
+.CalendarDay__blocked_calendar::after,
+.CalendarDay__blocked_out_of_range::after {
+    content: '' !important;
+    position: absolute !important;
+    top: 50% !important;
+    left: 10% !important;
+    right: 10% !important;
+    height: 1px !important;
+    background-color: rgba(244, 67, 54, 0.8) !important;
+    transform: translateY(-50%) !important;
+}
+
+/* Today's date highlighting */
+.CalendarDay__today {
+    background-color: rgba(255, 193, 7, 0.3) !important;
+    border: 1px solid rgba(255, 193, 7, 0.6) !important;
+    color: white !important;
+}
+
+/* Navigation arrows */
+.DayPickerNavigation_button {
+    background-color: rgba(61, 94, 110, 0.8) !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    color: white !important;
+}
+
+.DayPickerNavigation_button:hover {
+    background-color: rgba(61, 94, 110, 1) !important;
+    border: 1px solid rgba(255, 255, 255, 0.5) !important;
+}
+
+/* Month/year display */
+.DayPicker_caption {
+    color: white !important;
+    font-family: 'Inter', sans-serif !important;
+    font-weight: 500 !important;
+}
+
+/* Button styling */
+.future-tab-container .btn-primary {
+    background: linear-gradient(135deg, rgba(61, 94, 110, 0.8), rgba(36, 57, 73, 0.9)) !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    color: white !important;
+    font-weight: bold !important;
+    font-family: 'Inter', sans-serif !important;
+    border-radius: 8px !important;
+    padding: 12px 24px !important;
+    transition: all 0.3s ease !important;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2) !important;
+}
+
+.future-tab-container .btn-primary:hover {
+    background: linear-gradient(135deg, rgba(61, 94, 110, 1), rgba(36, 57, 73, 1)) !important;
+    border: 1px solid rgba(255, 255, 255, 0.5) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3) !important;
+}
+
+.future-tab-container .btn-primary:focus {
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.2) !important;
+}
+
+.future-tab-container .btn-primary:active {
+    transform: translateY(0px) !important;
+}
+
+/* Dash Bootstrap Label styling */
+.future-tab-container .dash-bootstrap-label {
+    color: white !important;
+    font-weight: 500 !important;
+    font-size: 0.9em !important;
+    font-family: 'Inter', sans-serif !important;
+}
+
+/* Loading spinner */
+.future-tab-container .dash-spinner {
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+/* Graph containers */
+.future-tab-container .js-plotly-plot {
+    background: transparent !important;
+}
+
+/* Override for the instruction card specifically */
+.future-tab-container .card[style*="background-color: #f8f9fa"] {
+    background: rgba(255, 255, 255, 0.1) !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+}
+
+/* Results and context divs */
+.future-tab-container #forecast-results,
+.future-tab-container #forecast-context-info {
+    color: white !important;
+    font-family: 'Inter', sans-serif !important;
+}
+
+/* ========== CHART AND MAP STYLING ========== */
+
+/* Chart card styling */
+.future-tab-container .chart-card {
+    background-color: transparent !important;
+    border: 1px solid rgba(255,255,255,0.2) !important;
+}
+
+.future-tab-container .chart-card-header {
+    background-color: rgba(61, 94, 110, 0.4) !important;
+    border: none !important;
+}
+
+.future-tab-container .chart-card-body {
+    background-color: rgba(61, 94, 110, 0.2) !important;
+}
+
+/* Chart title styling */
+.future-tab-container .card-title-header {
+    color: white !important;
+    font-family: 'Inter', sans-serif !important;
+    font-weight: normal !important;
+}
+
+/* Enhanced chart containers */
+.future-tab-container .js-plotly-plot {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border-radius: 8px !important;
+    backdrop-filter: blur(10px);
+}
+
+/* Custom dropdown styling for charts/maps */
+.future-tab-container .custom-dropdown .Select-control {
+    background-color: #3d5e6e !important;
+    border: 1px solid rgba(255,255,255,0.3) !important;
+    border-radius: 6px !important;
+    color: white !important;
+    font-size: 12px !important;
+}
+
+.future-tab-container .custom-dropdown .Select-placeholder {
+    color: rgba(255,255,255,0.7) !important;
+}
+
+.future-tab-container .custom-dropdown .Select-input > input {
+    color: white !important;
+}
+
+.future-tab-container .custom-dropdown .Select-menu-outer {
+    background-color: #3d5e6e !important;
+    border: 1px solid rgba(255,255,255,0.3) !important;
+}
+
+.future-tab-container .custom-dropdown .Select-option {
+    background-color: #3d5e6e !important;
+    color: white !important;
+}
+
+.future-tab-container .custom-dropdown .Select-option:hover {
+    background-color: rgba(255,255,255,0.1) !important;
+}
+
+.future-tab-container .custom-dropdown .Select-multi-value-wrapper {
+    background-color: #3d5e6e !important;
+}
+
+.future-tab-container .custom-dropdown .Select-value {
+    background-color: rgba(255,255,255,0.2) !important;
+    border: 1px solid rgba(255,255,255,0.3) !important;
+    color: white !important;
+}
+
+/* Custom date picker styling for charts/maps */
+.future-tab-container .custom-date-picker .DateInput {
+    background-color: #3d5e6e !important;
+    border: 1px solid rgba(255,255,255,0.3) !important;
+    border-radius: 6px !important;
+}
+
+.future-tab-container .custom-date-picker .DateInput_input {
+    background-color: #3d5e6e !important;
+    color: white !important;
+    font-size: 12px !important;
+}
+
+.future-tab-container .custom-date-picker .DateInput_input::placeholder {
+    color: rgba(255,255,255,0.7) !important;
+}
+
+.future-tab-container .custom-date-picker .DateRangePickerInput {
+    background-color: #3d5e6e !important;
+    border: 1px solid rgba(255,255,255,0.3) !important;
+    border-radius: 6px !important;
+}
+
+/* Override default card styles for charts and maps in future tab */
+.future-tab-container .card {
+    background: rgba(255, 255, 255, 0.05) !important;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+/* Ensure all paragraphs and text elements are white */
+.future-tab-container p,
+.future-tab-container span,
+.future-tab-container div:not(.card):not(.btn) {
+    color: rgba(255, 255, 255, 0.9) !important;
+    font-family: 'Inter', sans-serif !important;
+}
+
+/* List styling in future tab */
+.future-tab-container ul,
+.future-tab-container li {
+    color: white !important;
+    font-family: 'Inter', sans-serif !important;
+}
+
+/* Strong/bold text styling */
+.future-tab-container strong,
+.future-tab-container b {
+    color: white !important;
+    font-family: 'Inter', sans-serif !important;
+    font-weight: bold !important;
+}
+
+/* Horizontal rule styling */
+.future-tab-container hr {
+    border-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+/* Row and column spacing adjustments */
+.future-tab-container .row {
+    margin: 0 !important;
+}
+
+.future-tab-container .col,
+.future-tab-container [class*="col-"] {
+    padding-left: 0.75rem !important;
+    padding-right: 0.75rem !important;
+}
+
+/* Ensure all text in future tab uses Inter font and appropriate weights */
+.future-tab-container * {
+    font-family: 'Inter', sans-serif !important;
+}
+
+.future-tab-container p, 
+.future-tab-container span, 
+.future-tab-container div:not(.card-title):not(.filters-title):not(.card-title-header) {
+    font-weight: 300 !important;
+}
+
+/* Plotly chart background transparency */
+.future-tab-container .plotly .bg {
+    fill: transparent !important;
+}
+
+.future-tab-container .plotly .main-svg {
+    background: transparent !important;
+}
+
+/* ========== CHART TEXT STYLING FOR WHITE TEXT ========== */
+
+/* Plotly chart text styling - make all text white */
+.future-tab-container .js-plotly-plot .plotly text {
+    fill: white !important;
+    font-family: 'Inter', sans-serif !important;
+}
+
+/* Chart titles */
+.future-tab-container .js-plotly-plot .gtitle text,
+.future-tab-container .js-plotly-plot .g-gtitle text {
+    fill: white !important;
+    font-family: 'Inter', sans-serif !important;
+    font-weight: bold !important;
+}
+
+/* Axis labels and tick labels */
+.future-tab-container .js-plotly-plot .xaxislayer-above text,
+.future-tab-container .js-plotly-plot .yaxislayer-above text,
+.future-tab-container .js-plotly-plot .xtick text,
+.future-tab-container .js-plotly-plot .ytick text {
+    fill: white !important;
+    font-family: 'Inter', sans-serif !important;
+}
+
+/* Axis titles */
+.future-tab-container .js-plotly-plot .xtitle text,
+.future-tab-container .js-plotly-plot .ytitle text {
+    fill: white !important;
+    font-family: 'Inter', sans-serif !important;
+    font-weight: 500 !important;
+}
+
+/* Legend text */
+.future-tab-container .js-plotly-plot .legend text,
+.future-tab-container .js-plotly-plot .legendtext {
+    fill: white !important;
+    font-family: 'Inter', sans-serif !important;
+}
+
+/* Colorbar text */
+.future-tab-container .js-plotly-plot .colorbar text,
+.future-tab-container .js-plotly-plot .cbtitleunshift text,
+.future-tab-container .js-plotly-plot .cbticklabels text {
+    fill: white !important;
+    font-family: 'Inter', sans-serif !important;
+}
+
+/* Annotation text */
+.future-tab-container .js-plotly-plot .annotation text {
+    fill: white !important;
+    font-family: 'Inter', sans-serif !important;
+}
+
+/* Hover text */
+.future-tab-container .js-plotly-plot .hovertext {
+    fill: white !important;
+    font-family: 'Inter', sans-serif !important;
+}
+
+/* Subplot titles */
+.future-tab-container .js-plotly-plot .subplot .gtitle text {
+    fill: white !important;
+    font-family: 'Inter', sans-serif !important;
+    font-weight: 500 !important;
+}
+
+/* Grid lines */
+.future-tab-container .js-plotly-plot .xgrid,
+.future-tab-container .js-plotly-plot .ygrid {
+    stroke: rgba(255, 255, 255, 0.2) !important;
+}
+
+/* Axis lines */
+.future-tab-container .js-plotly-plot .xlines,
+.future-tab-container .js-plotly-plot .ylines {
+    stroke: rgba(255, 255, 255, 0.4) !important;
+}
+
+/* Modebar styling */
+.future-tab-container .js-plotly-plot .modebar {
+    background: rgba(61, 94, 110, 0.8) !important;
+    border-radius: 4px !important;
+}
+
+.future-tab-container .js-plotly-plot .modebar-btn {
+    color: white !important;
+    fill: white !important;
+}
+
+.future-tab-container .js-plotly-plot .modebar-btn:hover {
+    background: rgba(255, 255, 255, 0.2) !important;
+}
+
+/* ========== RISK FORECAST PAGE STYLES ========== */
+
+/* Risk forecast main container styling */
+.risk-forecast-container {
+    background: rgba(255, 255, 255, 0.05) !important;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* Risk forecast page title */
+.risk-forecast-container h2 {
+    color: white !important;
+    font-family: 'Inter', sans-serif !important;
+    font-weight: bold !important;
+    margin-bottom: 20px;
+}
+
+/* How to Use section card styling */
+.risk-forecast-container .card {
+    background: rgba(255, 255, 255, 0.08) !important;
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    border-radius: 8px !important;
+}
+
+.risk-forecast-container .card-header {
+    background: transparent !important;
+    border: none !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
+    color: white !important;
+}
+
+.risk-forecast-container .card-body {
+    background: transparent !important;
+    color: white !important;
+}
+
+.risk-forecast-container .card-title {
+    color: white !important;
+    font-family: 'Inter', sans-serif !important;
+    font-weight: bold !important;
+}
+
+.risk-forecast-container .card-text {
+    color: rgba(255, 255, 255, 0.9) !important;
+    font-family: 'Inter', sans-serif !important;
+    font-weight: 300 !important;
+}
+
+/* Input controls styling */
+.risk-forecast-container .form-label,
+.risk-forecast-container label {
+    color: white !important;
+    font-family: 'Inter', sans-serif !important;
+    font-weight: 500 !important;
+    margin-bottom: 8px;
+}
+
+/* Date picker styling for risk forecast */
+.risk-forecast-container .SingleDatePickerInput {
+    background-color: #3d5e6e !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    border-radius: 6px !important;
+}
+
+.risk-forecast-container .DateInput_input {
+    background-color: #3d5e6e !important;
+    color: white !important;
+    font-size: 14px !important;
+    font-family: 'Inter', sans-serif !important;
+    border: none !important;
+}
+
+.risk-forecast-container .DateInput_input::placeholder {
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* Number input fields for lat/lon */
+.risk-forecast-container .form-control,
+.risk-forecast-container input[type="number"] {
+    background-color: #3d5e6e !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    border-radius: 6px !important;
+    color: white !important;
+    font-family: 'Inter', sans-serif !important;
+    font-size: 14px !important;
+    padding: 8px 12px !important;
+}
+
+.risk-forecast-container .form-control::placeholder,
+.risk-forecast-container input[type="number"]::placeholder {
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.risk-forecast-container .form-control:focus,
+.risk-forecast-container input[type="number"]:focus {
+    background-color: #3d5e6e !important;
+    border-color: rgba(255, 255, 255, 0.5) !important;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.1) !important;
+    color: white !important;
+}
+
+/* Generate forecast button styling */
+.risk-forecast-container .btn-primary {
+    background: linear-gradient(45deg, #3d5e6e, #517fa4) !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    color: white !important;
+    font-family: 'Inter', sans-serif !important;
+    font-weight: 500 !important;
+    border-radius: 6px !important;
+    transition: all 0.3s ease !important;
+    backdrop-filter: blur(10px);
+}
+
+.risk-forecast-container .btn-primary:hover {
+    background: linear-gradient(45deg, #2a4c5a, #3d5e6e) !important;
+    border-color: rgba(255, 255, 255, 0.5) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3) !important;
+}
+
+.risk-forecast-container .btn-primary:focus {
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Alert styling for status messages */
+.risk-forecast-container .alert-success {
+    background: rgba(40, 167, 69, 0.2) !important;
+    border: 1px solid rgba(40, 167, 69, 0.4) !important;
+    color: rgba(255, 255, 255, 0.9) !important;
+    backdrop-filter: blur(10px);
+}
+
+.risk-forecast-container .alert-danger {
+    background: rgba(220, 53, 69, 0.2) !important;
+    border: 1px solid rgba(220, 53, 69, 0.4) !important;
+    color: rgba(255, 255, 255, 0.9) !important;
+    backdrop-filter: blur(10px);
+}
+
+.risk-forecast-container .alert-warning {
+    background: rgba(255, 193, 7, 0.2) !important;
+    border: 1px solid rgba(255, 193, 7, 0.4) !important;
+    color: rgba(255, 255, 255, 0.9) !important;
+    backdrop-filter: blur(10px);
+}
+
+/* Result cards styling */
+.risk-forecast-container .card.border-primary {
+    background: rgba(61, 94, 110, 0.3) !important;
+    border: 1px solid rgba(13, 110, 253, 0.5) !important;
+    backdrop-filter: blur(10px);
+}
+
+.risk-forecast-container .card.border-success {
+    background: rgba(61, 94, 110, 0.3) !important;
+    border: 1px solid rgba(25, 135, 84, 0.5) !important;
+    backdrop-filter: blur(10px);
+}
+
+.risk-forecast-container .card.border-warning {
+    background: rgba(61, 94, 110, 0.3) !important;
+    border: 1px solid rgba(255, 193, 7, 0.5) !important;
+    backdrop-filter: blur(10px);
+}
+
+.risk-forecast-container .card.border-danger {
+    background: rgba(61, 94, 110, 0.3) !important;
+    border: 1px solid rgba(220, 53, 69, 0.5) !important;
+    backdrop-filter: blur(10px);
+}
+
+.risk-forecast-container .card.border-secondary {
+    background: rgba(61, 94, 110, 0.3) !important;
+    border: 1px solid rgba(108, 117, 125, 0.5) !important;
+    backdrop-filter: blur(10px);
+}
+
+.risk-forecast-container .card.border-info {
+    background: rgba(61, 94, 110, 0.3) !important;
+    border: 1px solid rgba(13, 202, 240, 0.5) !important;
+    backdrop-filter: blur(10px);
+}
+
+/* Risk forecast result text styling */
+.risk-forecast-container .card h2,
+.risk-forecast-container .card h4,
+.risk-forecast-container .card h5 {
+    color: white !important;
+    font-family: 'Inter', sans-serif !important;
+}
+
+.risk-forecast-container .card p,
+.risk-forecast-container .card li {
+    color: rgba(255, 255, 255, 0.9) !important;
+    font-family: 'Inter', sans-serif !important;
+    font-weight: 300 !important;
+}
+
+.risk-forecast-container .card ul {
+    margin-bottom: 15px;
+}
+
+.risk-forecast-container .card hr {
+    border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+/* Chart containers in risk forecast */
+.risk-forecast-container .js-plotly-plot {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+}
+
+/* Plotly chart background transparency */
+.risk-forecast-container .plotly .bg {
+    fill: transparent !important;
+}
+
+.risk-forecast-container .plotly .main-svg {
+    background: transparent !important;
+}
+
+/* ========== PLOTLY CHART TEXT STYLING ========== */
+/* Plotly chart text elements */
+.risk-forecast-container .plotly text {
+    fill: white !important;
+    color: white !important;
+}
+
+/* Chart titles */
+.risk-forecast-container .plotly .gtitle,
+.risk-forecast-container .plotly .g-gtitle text {
+    fill: white !important;
+    color: white !important;
+}
+
+/* Axis labels and tick labels */
+.risk-forecast-container .plotly .xtick text,
+.risk-forecast-container .plotly .ytick text,
+.risk-forecast-container .plotly .ztick text {
+    fill: white !important;
+    color: white !important;
+}
+
+/* Axis titles */
+.risk-forecast-container .plotly .xtitle text,
+.risk-forecast-container .plotly .ytitle text,
+.risk-forecast-container .plotly .ztitle text {
+    fill: white !important;
+    color: white !important;
+}
+
+/* Legend text */
+.risk-forecast-container .plotly .legend text,
+.risk-forecast-container .plotly .legendtext {
+    fill: white !important;
+    color: white !important;
+}
+
+/* Annotation text */
+.risk-forecast-container .plotly .annotation text,
+.risk-forecast-container .plotly .annotationtext {
+    fill: white !important;
+    color: white !important;
+}
+
+/* Colorbar labels */
+.risk-forecast-container .plotly .cbtick text,
+.risk-forecast-container .plotly .cbtitle text {
+    fill: white !important;
+    color: white !important;
+}
+
+/* Hover text */
+.risk-forecast-container .plotly .hovertext {
+    color: white !important;
+}
+
+/* Subplot titles */
+.risk-forecast-container .plotly .subplot .annotation-text {
+    fill: white !important;
+    color: white !important;
+}
+
+/* Grid and axis lines */
+.risk-forecast-container .plotly .xgrid,
+.risk-forecast-container .plotly .ygrid,
+.risk-forecast-container .plotly .zgrid {
+    stroke: rgba(255, 255, 255, 0.3) !important;
+}
+
+.risk-forecast-container .plotly .xlines,
+.risk-forecast-container .plotly .ylines,
+.risk-forecast-container .plotly .zlines {
+    stroke: rgba(255, 255, 255, 0.5) !important;
+}
+
+/* Responsive adjustments for risk forecast */
+@media (max-width: 768px) {
+    .risk-forecast-container .col-md-3,
+    .risk-forecast-container .col-md-6 {
+        margin-bottom: 15px;
+    }
+    
+    .risk-forecast-container .btn-lg {
+        font-size: 14px !important;
+        padding: 8px 16px !important;
+    }
+}
+
+/* Risk level indicator styling */
+.risk-forecast-container h4[style*="color"] {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    font-weight: bold !important;
+}
+
+/* Feature display list styling */
+.risk-forecast-container .card ul li {
+    padding: 4px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.risk-forecast-container .card ul li:last-child {
+    border-bottom: none;
+}
